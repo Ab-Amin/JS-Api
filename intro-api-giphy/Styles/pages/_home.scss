@@ -1,0 +1,90 @@
+body {
+  background:rgb(35, 35, 35);
+  &::before {
+    content:'';
+    background:url('../img/cat-nyan-cat.gif');
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top:0;
+    left:0;
+    transform:rotate(45deg) translate(-25%,-10%);
+  }
+}
+h1 {
+  font-family: 'Itim', cursive;
+  text-align: center;
+  color:#fff;
+  font-size: 50px;
+  font-weight: normal;
+  margin-top: 0;
+}
+.banana {
+  margin-top: 50px;
+  text-align: center;
+  img {
+    width: 100px;
+  }
+}
+form {
+  text-align: center;
+  div {
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    margin-bottom: 15px;
+    color:#fff;
+    font-family: 'Itim', cursive;
+  }
+  input {
+    font-family: 'Itim', cursive;
+    padding:10px 30px;
+    border:0;
+    margin:0;
+    display: inline-block;
+    &[type="text"] {
+      border-radius:5px 0 0 5px;
+      width: 20%;
+      &:focus {
+        background:yellow;
+        outline:none;
+      }
+    }
+    &[type="button"] {
+      border-radius:0 5px 5px 0;
+      cursor:pointer;
+      background:deeppink;
+      color:#fff;
+      transition:.3s all ease-in-out;
+      &:hover {
+        background:darken(deeppink, 10%);
+      }
+    }
+  }
+  select {
+    border-radius:5px;
+    margin-left: 10px;
+  }
+}
+.wrapper {
+  max-width:90%;
+  margin:100px auto;
+  color:#fff;
+  background-color: rgb(44, 44, 44);
+  border-radius: 15px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+  img {
+    border-radius: 10px;
+    max-width: 200px;
+    object-fit: cover;
+    height: 200px;
+    transition: all .3s ease-in-out;
+    &:hover{
+      scale: 1.1;
+      transition: all .3s ease-in-out;
+    }
+  }
+}
