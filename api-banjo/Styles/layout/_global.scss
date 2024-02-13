@@ -24,11 +24,13 @@ body{
 
     .mini-wrapper{
       display: flex;
-
+      gap: 1rem;
+      
+      h1{
+        color: black;
+      }
       .discover{
-        h1{
-          color: black;
-        }
+        width: 50%;
         div{
           display: flex;
           flex-wrap: wrap;
@@ -39,10 +41,17 @@ body{
             border-radius: 10px;
             transition: all .2s ease-in-out;
             &:hover{
-              scale: 1.2;
+              scale: 1.1;
               transition: all .2s ease-in-out;
             }
           }
+        }
+      }
+      .profile{
+        width: 50%;
+        text-align: center;
+        img{
+          border-radius: 15px 5px 15px 5px;
         }
       }
     }

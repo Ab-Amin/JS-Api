@@ -25,7 +25,8 @@ function moreShiba(select) {
       });
     })
     .catch(error => {console.log("Erreur lors de la récup des données :", error);
-  })  
+  }) 
+  
 }
 
 selectBox.addEventListener('input', function(){
