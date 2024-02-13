@@ -1,0 +1,53 @@
+body{
+  padding: 50px;
+
+  display: flex;
+  flex-direction: column;
+
+  img[alt="banjo logo"]{
+    width: 50%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .wrapper{
+    h1{
+      color: red;
+    }
+    .description{
+      p{
+        color: rgb(86, 84, 84);
+        font-size: 15px;
+        line-height: 24px;
+      }
+    }
+
+    .mini-wrapper{
+      display: flex;
+
+      .discover{
+        h1{
+          color: black;
+        }
+        div{
+          display: flex;
+          flex-wrap: wrap;
+          gap: .3rem;
+          img{
+            width: 100px;
+            aspect-ratio: 1/1;
+            border-radius: 10px;
+            transition: all .2s ease-in-out;
+            &:hover{
+              scale: 1.2;
+              transition: all .2s ease-in-out;
+            }
+          }
+        }
+      }
+    }
+  
+
+  }
+
+}
