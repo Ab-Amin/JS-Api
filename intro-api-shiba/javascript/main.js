@@ -1,11 +1,3 @@
-// fetch(`https://api.example.com/data`)
-//   .then(response => response.json())
-//   .then(data => {
-//     console.log(data);
-//   })
-//   .catch(error => {console.log("Erreur lors de la récup des données :", error);
-// })
-
 const miniWrapper = document.querySelector('.mini-wrapper')
 let selectBox = document.querySelector('select') 
 
@@ -25,8 +17,7 @@ function moreShiba(select) {
       });
     })
     .catch(error => {console.log("Erreur lors de la récup des données :", error);
-  }) 
-  
+  })
 }
 
 selectBox.addEventListener('input', function(){

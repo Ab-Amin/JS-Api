@@ -20,7 +20,7 @@ function banjoProfiles() {
       <p>${data.users[nbr].address.street} - ${data.users[nbr].address.city} (${data.users[nbr].address.country})</p>
       `
     }
-    
+
     addEventListener('click', function(e) {
       if (e.target.classList.contains('imgProfiles')) {
         dataIndex = e.target.getAttribute('data-index');
@@ -29,11 +29,9 @@ function banjoProfiles() {
     
         banjoProfileInfo(dataIndex)
       }
-    
+
     });
-
-
-
+    
   })
   .catch(error => {console.log("Erreur lors de la récup des données :", error);
 })
