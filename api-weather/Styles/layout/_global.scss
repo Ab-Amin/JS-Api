@@ -1,0 +1,16 @@
+body{
+  background-color: rgb(180, 180, 180);
+  display: flex;
+  justify-content: center;
+
+  .wrapper{
+    text-align: center;
+    margin: 50px;
+
+    select{
+      padding: 5px;
+      border-radius: 10px;
+
+    }
+  }
+}
