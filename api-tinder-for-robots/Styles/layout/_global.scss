@@ -1,0 +1,93 @@
+body{
+  font-family: Arial;
+
+  .wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .trier{
+      margin: 50px auto;
+      // button{}
+    }
+
+    .robots-profiles{
+      max-width: 85%;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      .robot--profile{
+        border-radius: 10px 10px 10px 10px;
+        overflow: hidden;
+        position: relative;
+        transition: all .3s ease-in-out;
+        &:hover{
+          padding: 5px;
+
+          img{
+            position: absolute;
+            top: 0;
+            width: 100%;
+            aspect-ratio: 1/1;
+            transform: translateX(-110%);
+            transition: transform .3s ease-in-out;
+            // transition: display 1s ease-in-out;
+          }
+          .hover_hidden{
+            display: block;
+          }
+          .fullName{
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 0;
+          }
+          .type{
+            font-size: 12px;
+            margin-top: 5px;
+            margin-bottom: 8px;
+          }
+          .language{
+            font-size: 13px;
+            margin-top: 0;
+          }
+          .desc{
+            font-size: 13px;
+            line-height: 20px;
+          }
+        }
+        img{
+          display: block;
+          width: 100%;
+          height: 100%;
+          border-radius: 10px 80px 10px 10px;
+          transition: all .3s ease-in-out;
+          // border-top-right-radius: 80px;
+        }
+      }
+    }
+  }
+}
+
+
+.guy{
+  background-color: rgb(104, 216, 253);
+}
+.girl{
+  background-color: rgb(228, 22, 211);
+}
+.hover_hidden{
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
