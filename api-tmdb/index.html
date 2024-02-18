@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- pour le swipper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+  <!-- mes fichiers -->
+  <link rel="stylesheet" href="scss/style.min.css">
+  <title>Exercice TMDB</title>
+</head>
+<body>
+  
+  <main>
+    <div class="wrapper">
+      <img src="img/channels4_profile.jpg" alt="logo" class="logo">
+      <div class="search">
+        <input type="text">
+        <button type="button">Chercher</button>
+      </div>
+    </div>
+    
+    
+    <div class="swiper mySwiper">
+      
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <!-- 
+          <div class="swiper-slide">Slide 1</div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+          ... -->
+        </div> 
+        
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        
+        
+      </div>
+      <div class="nav-buttons">
+        
+        <button class="next--page hidden" type="button">Next page ></button>
+        <button class="previous--page hidden" type="button">< Previous page</button>
+      </div>
+      
+    </main>   
+    
+    <script src="script/main.js" defer></script>
+  </body>
+</html>
