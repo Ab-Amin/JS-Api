@@ -34,6 +34,8 @@ function topRated(type, pageNbr) {
     .then(response => response.json())
     .then(data => {
       console.log(data);
+
+      // (Ajout perso) =-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=--=
       console.log(`current page : ${data.page}`);
       console.log(`total pages : ${data.total_pages}`);
       console.log("=-=-=-=-=-=-=-=--=");
@@ -66,17 +68,16 @@ function topRated(type, pageNbr) {
       if (data.page == data.total_pages) {
         nextPage.classList.add('hidden')
       }
-
+      // (Ajout perso) =-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=--=-=-=-=-=-=-=-=-=--=
 
       for (let i = 0; i < data.results.length; i++) {
         section.innerHTML += `
-        <div class="tv-show">
+        <div class="tv-show" data-number="${i}">
 
-          <h2 class="show-name" data-number="${i}">${data.results[i].name}</h2>
+          <h2 class="show-name">${data.results[i].name}</h2>
           <div class="imgDesc">
             <img src="https://image.tmdb.org/t/p/w500/${data.results[i].poster_path}" alt="">
             <div class="desc">
-              <p><small style="font-size:20px;">number of votes : </small> ${data.results[i].vote_count}</p>
               <p><small style="font-size:20px;">rating : </small>${(data.results[i].vote_average).toFixed(1)}/10</p>
             </div>
           </div>
@@ -85,8 +86,9 @@ function topRated(type, pageNbr) {
         `
       }
 
+      // Fonction pour la pop-up avec dataNbr qui est donnée gràce à data-number dans le for ↑
+      // Comme ça on a les meme info dans la serie cliqué et la pop-up (en gros le i = dataNbr)
       function popUpWindow(dataNbr) {
-
         infoWindow.innerHTML =  `
         <div class="infoWindow--img">
           <div class="delete">X</div>
@@ -106,17 +108,29 @@ function topRated(type, pageNbr) {
         `
       }
 
+      // Affiche un pop-up avec des info en plus si clique sur series.
       section.addEventListener('click', function (e) {
-        if (e.target.classList.contains('show-name')) {
+        if (e.target.closest('.tv-show')) {
+          console.log('click');
           infoWindow.innerHTML = ''
-          dataNbr = e.target.getAttribute('data-number')
+          dataNbr = e.target.closest('.tv-show').getAttribute('data-number')
           console.log(dataNbr);
           infoWindow.classList.remove('scale-hidden')
           popUpWindow(dataNbr)
         }
 
+        // Parail mais que si on clique sur le titre(h2)
+        // if (e.target.classList.contains('show-name')) {
+        //   infoWindow.innerHTML = ''
+        //   dataNbr = e.target.getAttribute('data-number')
+        //   console.log(dataNbr);
+        //   infoWindow.classList.remove('scale-hidden')
+        //   popUpWindow(dataNbr)
+        // }
+
       })
       
+      // Supprime le pop-up (lui remet la class qui faisait qu'il etait caché)
       infoWindow.addEventListener('click', function(e){
         if (e.target.classList.contains('delete')) {
           infoWindow.classList.add('scale-hidden')
@@ -131,7 +145,7 @@ function topRated(type, pageNbr) {
   })
 }
 
-
+// Get l'attribut data-show sur boutons deja fait en HTML qui completera le lien fetch en fonction du bouton sur lequel on clic et page poar defaut à 1, comme ça si on reclick sur ces bouton, on reviens à la page 1. 
 buttonNav.addEventListener('click', function(e){
   showData = e.target.getAttribute('data-show')
   section.innerHTML = ''
@@ -144,6 +158,7 @@ buttonNav.addEventListener('click', function(e){
 
 })
 
+// (Ajout perso) Navigation a travers toutes les pages disponible + allez sur page precisé 
 nextPage.addEventListener('click', function (){
   section.innerHTML = ''
   pageNbr++
@@ -163,15 +178,6 @@ pageSelect.addEventListener('keypress', function (e){
   }
 
 })
-
-
-
-// section.addEventListener('click', function (e) {
-//   if (e.target.classList.contains('tv-show')) {
-//     infoWindow.classList.remove('scale-hidden')
-//   }
-// })
-
 
 
 
