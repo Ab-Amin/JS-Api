@@ -119,15 +119,6 @@ function topRated(type, pageNbr) {
           popUpWindow(dataNbr)
         }
 
-        // Parail mais que si on clique sur le titre(h2)
-        // if (e.target.classList.contains('show-name')) {
-        //   infoWindow.innerHTML = ''
-        //   dataNbr = e.target.getAttribute('data-number')
-        //   console.log(dataNbr);
-        //   infoWindow.classList.remove('scale-hidden')
-        //   popUpWindow(dataNbr)
-        // }
-
       })
       
       // Supprime le pop-up (lui remet la class qui faisait qu'il etait caché)
