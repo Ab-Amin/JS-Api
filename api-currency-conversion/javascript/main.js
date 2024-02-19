@@ -26,22 +26,24 @@ let toConvertTo = document.querySelector('.toConvertTo')
 let btn = document.querySelector('.btn')
 let nbr = document.querySelector('.nbr')
 
-function currencySymmbols() {
-  fetch(`https://api.apilayer.com/fixer/symbols`, requestOptions)
-  .then(response => response.json())
-  .then(data => {
-    console.log(data);
-    console.log(data.symbols);
+// Prendre nom des currency à mettre dans <option></option> et diminutif à mettre dans value d'option 
 
-    console.log(Object.getOwnPropertyNames(data.symbols));
+// function currencySymmbols() {
+//   fetch(`https://api.apilayer.com/fixer/symbols`, requestOptions)
+//   .then(response => response.json())
+//   .then(data => {
+//     console.log(data);
+//     console.log(data.symbols);
 
-    // toConvert.innerHTML += `${data.symbols}`
-  })
-  .catch(error => {console.log("Erreur lors de la récup des données :", error);
-  })
-}
+//     // console.log(Object.getOwnPropertyNames(data.symbols));
 
-currencySymmbols()
+//     toConvert.innerHTML += `${data.symbols}`
+//   })
+//   .catch(error => {console.log("Erreur lors de la récup des données :", error);
+//   })
+// }
+
+// currencySymmbols()
 
 function currencyConversion(currency1, currency2, amount) {
   fetch(`https://api.apilayer.com/fixer/convert?to=${currency2}&from=${currency1}&amount=${amount}`, requestOptions)
@@ -68,9 +70,7 @@ function currencyConversion(currency1, currency2, amount) {
 
 btn.addEventListener('click', function(){
   console.log(`${txt.value} ${toConvert.value} ==> ${toConvertTo.value}`);
-  // currencyConversion(toConvert.value, toConvertTo.value, txt.value)
-
-  
+  currencyConversion(toConvert.value, toConvertTo.value, txt.value)
 })
 
 
