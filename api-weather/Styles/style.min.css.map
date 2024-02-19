@@ -1,1 +1,1 @@
-{"version":3,"sources":["base/_normalize.scss","layout/_global.scss"],"names":[],"mappings":"AAAA,KACE,UAAA,CAIF,mBACE,qBAAA,CAIF,IACE,cAAA,CCXF,KACE,wBAAA,CACA,YAAA,CACA,sBAAA,CAEA,cACE,iBAAA,CACA,WAAA,CAEA,qBACE,WAAA,CACA,kBAAA","file":"style.min.css"}
+{"version":3,"sourceRoot":"","sources":["base/_normalize.scss","layout/_global.scss"],"names":[],"mappings":"AAAA,KACE,WAIF,mBACE,sBAIF,IACE,eCXF,KACE,yBACA,aACA,uBAEA,cACE,kBACA,YAEA,qBACE,YACA","file":"style.min.css"}

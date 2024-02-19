@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- links -->
+  <link rel="stylesheet" href="Styles/style.min.css">
+  
+
+  <title> ... </title>
+</head>
+<body>
+
+  <header>
+    <img src="img/logo.png" alt="">
+    <nav>
+      <button type="button" data-show="top_rated">Les meilleures séries</button><!-- 
+       --><button type="button" data-show="popular">Les plus populaires</button><!-- 
+       --><button type="button" data-show="on_the_air">Séries actuelles</button><!-- 
+      --><button type="button" data-show="airing_today">Ce soir à la TV</button>
+    </nav>
+  </header>
+
+  <main>
+    <div class="nav-buttons">
+      <button class="previous--page hidden" type="button">< Previous page</button>
+      <div class="pagesInfo hidden">
+        <a href="#">1</a> <span>,</span>
+        <span class="currentPage"></span> <span>,</span>
+        <input type="text" class="pageSelect" placeholder="..."> <span>,</span>
+        <a href="#" class="nextPageSelect"></a>
+      </div>
+      <button class="next--page hidden" type="button">Next page ></button>
+    </div>
+
+    <section>
+      <!-- <div  class="tv-show">
+        <h2>${name}</h2>
+        <div class="imgDesc">
+          <img src="https://image.tmdb.org/t/p/w500/${image}" alt="">
+          <div class="desc">
+            <p><small style="font-size:20px;">number of votes : </small> ${nbr of votes}</p>
+            <p><small style="font-size:20px;">rating : </small>${results of votes}/10</p>
+          </div>
+        </div>
+      </div> -->
+
+    </section>
+     
+    
+  </main>
+  
+  <div class="infoWindow">
+
+    <!-- <div class="infoWindow--img">
+      <div class="delete">X</div>
+      <img src="https://image.tmdb.org/t/p/w500//ztkUQFLlC19CCMYHW9o1zWhJRNq.jpg" alt="">
+    </div>
+    <div class="infoWindow--info">
+      <div>
+        <h2>test test test test</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla expedita perferendis enim accusamus laudantium tempore, accusantium fuga exercitationem fugit nisi quibusdam modi, ratione dolores assumenda sequi libero numquam quo perspiciatis?</p>
+      </div>
+      <div class="infoWindow--info--vote">
+        <p>number of votes : <span class="nbr-ratings"></span> </p>
+        <p>rating : <span class="rating"></span> </p>
+      </div>
+    </div> -->
+
+  </div>
+  
+  <script src="javascript/main.js"></script>
+</body>
+</html>

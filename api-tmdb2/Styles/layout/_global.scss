@@ -1,0 +1,262 @@
+body{
+  background-color: #161616;
+  header{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto;
+    img{
+      width: 300px;
+    }
+    nav{
+      margin: 20px auto;
+      button{
+        padding: 10px 20px;
+        border: 2px solid red;
+        border-radius: 10px;
+        background-color: transparent;
+        font-weight: bold;
+        margin: 0 5px;
+        color: white;
+        &:hover{
+          background-color: rgb(214, 29, 29);
+        }
+        &:active{
+          background-color: red;
+          color: white;
+        }
+      }
+    }
+  }
+
+  main{
+    position: relative;
+    .nav-buttons{
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+      .next--page, .previous--page{
+        border: 2px solid red;
+        background-color: transparent;
+        color: #fff;
+        border-radius: 5px;
+        padding: 5px 10px;
+        text-transform: uppercase;
+        font-size: 12px;
+        white-space: nowrap;
+        cursor: pointer;
+    
+        // position: absolute;
+        z-index: 2;
+        top: 10px;
+        height: 27px;
+        &:hover{
+          background-color: #333333;
+        }
+      }
+      .next--page{
+        width: 100px;
+      }
+      .pagesInfo{
+        width: fit-content;
+        color: white;
+        display: flex;
+        justify-content: center;
+        a{
+          color:#fff;
+          text-decoration: none;
+          margin: 0 10px;
+          &:hover{
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            color: red;
+            text-decoration-color: red;
+          }
+        }
+        .currentPage{
+          margin: 0 10px;
+        }
+        input{
+          width: 20px;
+          margin: 0 3px;
+        }
+      }
+      .previous--page{
+        width: fit-content;
+      }
+      .hidden{
+        display: none;
+      }
+    }
+  
+    section{
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin: 10px auto;
+      @media screen  and (max-width:1500px) {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+      }
+      @media screen  and (max-width:1000px) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        min-width: 800px;
+      }
+      .tv-show{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        h2{
+          text-decoration: none;
+          color: white;
+          text-align: center;
+          font-size: 22px;
+          margin-bottom: 10px;
+          cursor: pointer;
+          &:hover{
+            text-decoration: underline;
+            text-underline-offset: 3px;
+          }
+        }
+        .imgDesc{
+          border-radius: 10px;
+          width: 340px;
+          overflow: hidden;
+          img{
+            height: 500px;
+            width: 100%;
+            margin-bottom: 0;
+            border-radius: 10px;
+            transition: all .3s ease-in-out;
+          }
+          &:hover{
+            transition: all .3s ease-in-out;
+            .desc{
+              transform: translateY(0%);
+              transition: all .3s ease-in-out;
+            }
+            img{
+              scale: 1.1;
+              transition: all .3s ease-in-out;
+            }
+          }
+          .desc{
+            position: absolute;
+            bottom: 0;
+            margin: 0 auto;
+            border-radius: 10px;
+            
+            transform: translateY(100%);
+            transition: all .3s ease-in-out;
+            height: 40%;
+            width: 340px;
+            background: linear-gradient(180deg, rgba(0,0,0,0) 10%, rgba(0,0,0,0.46546782544378695) 28%, rgba(0,0,0,0.7110299556213018) 46%, rgba(0,0,0,0.7938701923076923) 70%);
+
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            align-items: end;
+            p{
+              text-align: right;
+              // position: absolute;
+              // bottom: 0;
+              height: fit-content;
+              padding: 0 5px 10px;
+              color: #fff;
+              font-size: 34px;
+              width: 340px;
+              margin: 0 auto;
+              
+            }
+            // p:first-child{
+              
+            // }
+          }
+        }
+      }
+    }
+  } 
+
+  .infoWindow{
+    position: fixed;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    z-index: 10;
+    max-width: 1000px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+    border-radius: 20px;
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9122133875739645) 26%, rgba(0,0,0,0.8707932692307692) 57%, rgba(0,0,0,0.8619175295857988) 83%, rgba(0,0,0,0.7879530325443787) 89%, rgba(0,0,0,0.6666512573964497) 92%, rgba(0,0,0,0.4684264053254438) 95%, rgba(0,0,0,0.24949149408284022) 98%);
+    width: 85%;
+    transition: all .3s ease-in-out;
+    .infoWindow--img{
+      width: 40%;
+      img{
+        border-radius: 20px 0 0 20px;
+        height: 100%;
+      }
+    }
+    .infoWindow--info{
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: start;
+      color: white;
+      .infoWindow--info--vote{
+        white-space: nowrap;
+        p{
+          width: 90%;
+          font-size: 16px;
+          span{
+            font-size: 20px;
+          }
+        }
+      }
+    }
+    .delete{
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      color: red;
+      font-size: 24px;
+      font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    }
+  }
+
+  .scale-hidden{
+    scale: 0;
+    transition: all .3s ease-in-out;
+  }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
