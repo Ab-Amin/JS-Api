@@ -127,10 +127,7 @@ function topRated(type, pageNbr) {
           infoWindow.classList.add('scale-hidden')
           // e.target.classList.parentElement.add('scale-hidden')
         }
-        
       })
-
-      
     })
     .catch(error => {console.log("Erreur lors de la récup des données :", error);
   })

@@ -1,0 +1,152 @@
+
+body{
+  
+  main{
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100vh;
+  
+    > div{
+      position: absolute;
+
+      width: 400px;
+      aspect-ratio: 1 / 0.5;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+  
+      padding: 30px;
+      border: 2px solid rebeccapurple;
+      border-radius: 5px;
+    }
+  
+    .first-login{
+      transition: all 1s ease-in-out;
+      // backface-visibility: hidden;
+
+      > div{
+        width: 80%;
+        text-align: center;
+        
+        input, button{
+          width: 100%;
+          padding: 10px;
+          background-color: transparent;
+          border: 1px solid rebeccapurple;
+          border-radius: 5px;
+        }
+        input:first-of-type{
+          margin-bottom: 20px;
+        }
+        button{
+          width: 50%;
+          font-size: 16px;
+          &:hover{
+            background-color: rgb(221, 221, 221);
+            transition: all .3s ease-in-out
+          }
+        }
+      }
+  
+      // .login--name{}
+      
+      // .login--img{}
+  
+    }
+  
+    .profile{
+      transition: all 1s ease-in-out;
+
+      // transform: rotateY(180deg);
+      .your-image{
+        width: 95px;
+        aspect-ratio: 1/1;
+        border: 2px solid black;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+
+      .your-name{
+
+        p{
+          font-size: 18px;
+          font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        }
+      }
+
+      .settings{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        transition: all .3s ease-in-out;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover{
+          transform: rotate(180deg);
+          transition: all .3s ease-in-out;
+        }
+        &:active{
+          scale: 0.90;
+        }
+      }
+    }
+  
+  }
+
+}
+
+
+
+.hidden{
+  display: none;
+}
+
+.rotate{
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+
+  text-align: right;
+  cursor: pointer;
+
+  transition: all 1s ease-in-out;
+  &:hover{
+    transform: rotateZ(360deg);
+    transition: all .3s ease-in-out;
+  }
+  &:active{
+    scale: 0.90;
+  }
+
+}
+
+
+.rotate-all{  
+  transform: rotateY(180deg);
+  // backface-visibility: hidden;
+  transition: all 1.5s ease-in-out;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
